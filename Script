@@ -1,0 +1,10 @@
+require 'watir-webdriver'
+require 'selenium-webdriver'
+browser = Watir::Browser.new :chrome 
+browser.goto 'https://da.victoriabank.md/frontend/auth/userlogin?execution=e1s1&locale=en' 
+browser.text_field(:id => 'USER_PROPERTY_owwb_ws_loginPageLogin').set '5617332902'
+browser.text_field(:id => 'USER_PROPERTY_owwb_ws_loginPagePassword').click 
+Login = gets
+puts "Thank you" + ".Now sit back and relax"
+browser.text_field(:id => 'userIdInput').click
+sleep 10.00
